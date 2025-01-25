@@ -1,0 +1,17 @@
+.page-enter-active,
+.page-leave-active {
+  transition: var(--transition-default);
+}
+
+@media (max-width: 768px) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: var(--transition-default-tablet);
+  }
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}

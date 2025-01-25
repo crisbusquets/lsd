@@ -1,0 +1,108 @@
+---
+import Navigation from "./Navigation.astro";
+import { Image } from "astro:assets";
+import signature from "../assets/resources/titles/lluis-salles-signature.svg";
+import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
+import cerillas from "../assets/resources/ui/bg-cerillas.png";
+---
+
+<div class="intro">
+  <header>
+    <a href="/">
+      <Image src={signature} alt="Lluís Sallés" />
+    </a>
+
+    <Navigation />
+  </header>
+
+  <div class="titular">
+    <div>
+      <h1>
+        No bromeo, escribo incluso durmiendo.<br />Creador de
+        <i>argumentos narrativos</i>.
+      </h1>
+      <br />
+      <p>
+        Hacedor de contenidos, narrativos y visuales.
+        <a href="/diseno"><i>Naming</i></a>, especialista en conceptualización,
+        <a href="/conferencias"><i>storytelling</i></a> y
+        <a href="/diseno"><i>design thinker</i></a>. Copy Creativo.
+      </p>
+      <p>
+        Teórico, investigador y <a href="/docencia">docente</a>. A veces escribo <a href="/publicaciones">libros</a>.
+      </p>
+    </div>
+  </div>
+  <div class="silhouette">
+    <Image src={silhouette} alt="" />
+  </div>
+
+  <div class="cerillas">
+    <Image src={cerillas} alt="" />
+  </div>
+</div>
+
+<style>
+  .intro {
+    display: flex;
+    flex: 1 1 100%;
+    margin: var(--section-content-padding) 0 0 var(--section-content-margin);
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      padding: 0 var(--section-content-small-padding);
+      margin: 0;
+    }
+  }
+
+  .titular {
+    width: 425px;
+    margin: var(--section-content-padding) 0 var(--section-content-medium-padding) 0;
+  }
+
+  @media (max-width: 768px) {
+    .titular {
+      width: 100%;
+      margin: var(--section-lateral-padding) 0 0 0;
+    }
+  }
+
+  h1 {
+    margin: 0 0 var(--p-text-small-margin) 0;
+  }
+
+  .cerillas {
+    display: none;
+  }
+
+  .silhouette {
+    display: flex;
+    align-items: flex-end;
+    z-index: 99;
+  }
+
+  .silhouette:hover ~ .cerillas {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .silhouette:hover ~ .cerillas img {
+    width: 80%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    /* Assuming $tablet is 768px */
+    .silhouette {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+import Sidebar from "../components/Sidebar.astro";
+import "../styles/index.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lluís Sallés Diego</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <Sidebar />
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

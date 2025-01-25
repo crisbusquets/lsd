@@ -1,0 +1,68 @@
+h1 {
+  font-weight: bold;
+  font-size: var(--font-size-title-1);
+  line-height: 130%;
+}
+
+/* Responsive font size for headings */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-title-1-mobile);
+  }
+}
+
+strong,
+h1 i,
+html strong {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+p,
+li,
+span,
+label,
+input,
+caption,
+textarea,
+button,
+a {
+  font-size: var(--font-size-body-1);
+  line-height: 1.35;
+}
+
+span {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  p,
+  li,
+  span,
+  label,
+  input,
+  caption,
+  textarea,
+  button,
+  a {
+    font-size: var(--font-size-body-1-mobile);
+  }
+}
+
+a {
+  text-decoration: underline;
+  transition: var(--transition-default);
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 var(--p-text-small-margin) 0;
+}

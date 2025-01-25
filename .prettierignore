@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Ignore loved variables file
+variables.scss

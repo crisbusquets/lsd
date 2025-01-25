@@ -1,0 +1,72 @@
+---
+import Navigation from "./Navigation.astro";
+import { Image } from "astro:assets";
+import signature from "../assets/resources/titles/lluis-salles-signature.svg";
+import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
+import cerillas from "../assets/resources/ui/bg-cerillas.png";
+---
+
+<div class="lateral">
+  <header>
+    <a href="/">
+      <Image src={signature} alt="Lluís Sallés" />
+    </a>
+
+    <Navigation />
+  </header>
+
+  <div class="silhouette">
+    <Image src={silhouette} alt="" />
+  </div>
+
+  <div class="cerillas">
+    <Image src={cerillas} alt="" />
+  </div>
+</div>
+
+<style>
+  header {
+    position: fixed;
+  }
+
+  @media (max-width: 768px) {
+    /* Assuming $tablet is 768px */
+    header {
+      display: flex;
+      position: relative;
+    }
+  }
+
+  .cerillas {
+    display: none;
+  }
+
+  .silhouette {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+  }
+
+  .silhouette:hover ~ .cerillas {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .silhouette:hover ~ .cerillas img {
+    width: 80%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    /* Assuming $tablet is 768px */
+    .silhouette {
+      display: none;
+    }
+  }
+</style>
