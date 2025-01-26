@@ -12,9 +12,13 @@ import paisatgesUtopia from "../assets/resources/publications/paisatges-de-la-ut
 import tesiDoctoral from "../assets/resources/publications/tesi-doctoral-lluis-salles.jpg";
 import elogioLibertad from "../assets/resources/publications/elogio-de-la-libertad.jpg";
 import CAE from "../assets/resources/publications/condenados-a-entenderse.jpg";
+
+const pageTitle = "Publicaciones y artículos de Lluís Sallés";
+const pageDescription = "Libros, artículos académicos y publicaciones sobre diseño, branding e identidad.";
+const pageKeywords = "publicaciones académicas, libros diseño, artículos branding, investigación académica";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={publicacionesTitle} alt="Publicaciones Lluís Sallés." class="page-title-svg" />

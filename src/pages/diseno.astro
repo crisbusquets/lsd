@@ -4,9 +4,14 @@ import { Image } from "astro:assets";
 import disenoTitle from "../assets/resources/titles/diseno.svg";
 import DisenoDesktop from "../components/DisenoDesktop.astro";
 import DisenoMobile from "../components/DisenoMobile.astro";
+
+const pageTitle = "Portfolio de diseño de Lluís Sallés - Proyectos y trabajos";
+const pageDescription =
+  "Portfolio profesional con proyectos de branding, identidad corporativa y diseño para marcas nacionales e internacionales.";
+const pageKeywords = "portfolio diseño, branding, identidad corporativa, diseño gráfico, proyectos comerciales";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={disenoTitle} alt="Diseño y portfolio Lluís Sallés" class="page-title-svg" />

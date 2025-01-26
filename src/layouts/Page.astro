@@ -1,6 +1,16 @@
 ---
 import Sidebar from "../components/Sidebar.astro";
 import "../styles/index.css";
+import SEO from "../components/Seo.astro";
+
+interface PageProps {
+  title: string;
+  description: string;
+  keywords: string;
+  children: any;
+}
+
+const { title, description, keywords, children } = Astro.props as PageProps;
 ---
 
 <!doctype html>
@@ -10,7 +20,7 @@ import "../styles/index.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Lluís Sallés Diego</title>
+    <SEO title={title} description={description} keywords={keywords} />
   </head>
   <body>
     <div class="wrapper">

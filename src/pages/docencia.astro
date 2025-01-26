@@ -12,9 +12,14 @@ import logoIED from "../assets/resources/logos/ied.svg";
 import logoEsart from "../assets/resources/logos/esart.svg";
 import logoAitex from "../assets/resources/logos/aitex.svg";
 import Page from "../layouts/Page.astro";
+
+const pageTitle = "Experiencia docente de Lluís Sallés - Profesor Universitario";
+const pageDescription =
+  "Profesor en Elisava, UAB y otras instituciones académicas. Especializado en diseño, branding e identidad corporativa.";
+const pageKeywords = "docencia universitaria, Elisava, UAB, diseño gráfico, branding, identidad corporativa";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={docenciaTitle} alt="Docencia Lluís Sallés." class="page-title-svg" />

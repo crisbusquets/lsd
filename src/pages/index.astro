@@ -1,9 +1,15 @@
 ---
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Lluís Sallés Diego - Docente, investigador y especialista en Branding";
+const pageDescription =
+  "Doctor en Literatura, escritor y docente en Elisava UVic. Especialista en branding, narrativa de marca y design thinking con más de 25 años de experiencia en consultoría estratégica.";
+const pageKeywords =
+  "Lluís Sallés, branding, naming, storytelling, design thinking, docencia universitaria, investigación, Elisava";
 ---
 
-<Layout>
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <Hero />
 
   <div class="content-video">

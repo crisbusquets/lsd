@@ -3,9 +3,15 @@ import Page from "../layouts/Page.astro";
 import { Image } from "astro:assets";
 import quieneselTitle from "../assets/resources/titles/quien-es-el.svg";
 import divider from "../assets/resources/ui/divider.svg";
+
+const pageTitle = "Biografía de Lluís Sallés - Trayectoria profesional y académica";
+const pageDescription =
+  "Trayectoria profesional y académica de Lluís Sallés: docente, investigador, brand manager y teórico del diseño. Profesor Universitario en Elisava UVic.";
+const pageKeywords =
+  "Lluís Sallés biografía, brand manager, copy creativo, docente universitario, investigador, Elisava";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={quieneselTitle} alt="Quien es Lluís Sallés" class="page-title-svg" />

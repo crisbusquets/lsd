@@ -2,9 +2,14 @@
 import { Image } from "astro:assets";
 import conferenciasTitle from "../assets/resources/titles/conferencias.svg";
 import Page from "../layouts/Page.astro";
+
+const pageTitle = "Conferencias y ponencias de Lluís Sallés";
+const pageDescription =
+  "Conferencias sobre diseño, branding, identidad de marca y literatura en universidades y eventos profesionales.";
+const pageKeywords = "conferencias diseño, ponencias branding, eventos académicos, charlas profesionales";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={conferenciasTitle} alt="Conferencias Lluís Sallés." class="page-title-svg" />

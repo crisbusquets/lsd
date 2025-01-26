@@ -3,9 +3,13 @@ import Page from "../layouts/Page.astro";
 import { Image } from "astro:assets";
 import workshopsTitle from "../assets/resources/titles/workshops.svg";
 import workshopElisava from "../assets/resources/teaching/lluis-salles-elisava.jpg";
+
+const pageTitle = "Workshops y talleres impartidos por Lluís Sallés";
+const pageDescription = "Workshops especializados en branding y diseño para empresas como Volkswagen y Danone.";
+const pageKeywords = "workshops diseño, talleres branding, formación empresarial, Volkswagen, Danone";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={workshopsTitle} alt="Workshops Lluís Sallés" class="page-title-svg" />

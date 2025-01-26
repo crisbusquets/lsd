@@ -4,9 +4,13 @@ import contactoTitle from "../assets/resources/titles/contacto.svg";
 import sparkleGIF from "../assets/resources/ui/bengala.gif";
 import Page from "../layouts/Page.astro";
 import ContactForm from "../components/ContactForm.astro";
+
+const pageTitle = "Contacta con Lluís Sallés - Consultoría y colaboraciones";
+const pageDescription = "Formulario de contacto para consultas profesionales, académicas y colaboraciones.";
+const pageKeywords = "contacto Lluís Sallés, consultoría branding, colaboraciones académicas, asesoría diseño";
 ---
 
-<Page>
+<Page title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <div class="content">
     <h1>
       <Image src={contactoTitle} alt="Contacto Lluís Sallés." class="page-title-svg" />
