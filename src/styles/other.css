@@ -172,6 +172,7 @@ ul.basic li {
 
   div.content {
     margin-top: 60px;
+    margin-bottom: 300px;
     padding: var(--p-text-xmedium-margin);
   }
 
