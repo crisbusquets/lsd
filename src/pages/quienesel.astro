@@ -1,0 +1,83 @@
+---
+import Page from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+import quieneselTitle from "../assets/resources/titles/quien-es-el.svg";
+import divider from "../assets/resources/ui/divider.svg";
+---
+
+<Page>
+  <div class="content">
+    <h1>
+      <Image src={quieneselTitle} alt="Quien es Lluís Sallés" class="page-title-svg" />
+    </h1>
+    <p>
+      Dr. Lluís Sallés Diego (<a href="https://orcid.org/0000-0002-8173-5572" target="_blank" alt="ORCID Lluís Sallés"
+        >ORCID</a
+      >).
+    </p>
+    <p>
+      Ex-casi todo. Padre, escritor, investigador, teórico, copy creativo, namer, docente, diseñador gráfico, Brand
+      manager y conferenciante. Una vez tuvo un restaurante con unos amigos y de joven trabajó en todo lo que le
+      ofrecieron. Como consultor en identidad, imagen y estrategia de marca, ha desarrollado su trabajo en compañías
+      nacionales e internacionales. Socio fundador de Boixader et Salles, y Bómb estrategas.
+    </p>
+    <p>
+      Co-creador y co-director del Festival Creatus Dominus. Diseñador por la Escuela Massana de Barcelona, Graduado en
+      Humanidades, Master en Literatura comparada y Estudios culturales, y Doctor en Teoría de la Literatura y
+      Literatura comparada por la UAB. Ha impartido clases en distintas escuelas y universidades.
+    </p>
+    <p>
+      En este momento es Director del Máster Universitario en Estudios Interdisciplinarios en Diseño y Comunicación
+      (MUEIDC) en
+      <i
+        ><a href="https://www.elisava.net/" alt="Elisava" target="_blank"
+          >Elisava UVic. Facultad de diseño e ingeniería de Barcelona</a
+        ></i
+      >, donde también imparte clases en el Grado en diseño e Innovación y en el Máster Universitario en Estudios
+      Interdisciplinarios en Diseño y Comunicación.
+    </p>
+    <p>Su ámbito de investigación se centra en la construcción de la identidad.</p>
+    <strong>Actualmente</strong>
+    <ul class="ornamental">
+      <li>
+        Director del
+        <a href="https://www.elisava.net/masters/master-universitario-en-diseno/" alt="MUEIDC - Elisava" target="_blank"
+          >Máster Universitario en Estudios Interdisciplinarios en Diseño y Comunicación (MUEIDC)</a
+        >
+        en <i>Elisava UVic. Facultad de diseño e ingeniería de Barcelona</i>.
+      </li>
+      <li>
+        Profesor en
+        <i>Elisava UVic. Facultad de diseño e ingeniería de Barcelona</i>.
+      </li>
+      <li>Especialista en branding, investigador y teórico. Clientes:</li>
+      <ul class="basic indent">
+        <li>RSM Spain Auditores SLP: asesoría profesional sector retail.</li>
+        <li>Gal·la Termes. Brava Design: agencia de diseño.</li>
+        <li>
+          Proto: consultoria especialista en el habitat tech branding y en sus ámbitos: la iluminación, el mobiliario,
+          los pavimentos y la domótica entre otros.
+        </li>
+        <li>Tender Media: agencia de comunicación.</li>
+        <li>Mamuto: marca de género de punto masculina. Proyecto dirigido por Lluís Generó.</li>
+      </ul>
+    </ul>
+
+    <Image src={divider} alt="" class="divider" />
+
+    <p>
+      Mi existencia digital es posible gracias al apoyo, la insistencia y el trabajo siempre brillante de
+      <a href="https://www.cbusquets.com" target="_blank" alt="Cris Busquets">Cris Busquets</a>. Una marciana sin
+      parangón, sin la cual mi avatar algorítmico sería una quimera. ¡Gracias Cris!
+    </p>
+  </div>
+</Page>
+
+<style>
+  .indent {
+    margin: 0 0 0 var(--p-text-sm-margin);
+  }
+  img.divider {
+    margin: var(--section-content-padding) 0 var(--p-text-xmedium-margin) 0;
+  }
+</style>
