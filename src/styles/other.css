@@ -115,19 +115,22 @@ div.content {
 
 @media (max-width: 768px) {
   div.content {
-    margin: var(--section-content-small-padding) 0 0 0;
-    padding: var(--section-content-padding) var(--p-text-xmedium-margin) var(--p-text-xmedium-margin)
-      var(--p-text-xmedium-margin);
+    margin: 0;
+    padding: var(--p-text-xmedium-margin);
   }
 }
 
 .page-title-svg {
-  margin: 0 0 var(--p-text-small-margin) 0;
+  margin-bottom: var(--section-lateral-padding);
+  height: auto;
+  width: auto;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
   .page-title-svg {
-    height: var(--p-text-medium-margin);
+    margin-bottom: 0;
+    height: 36px;
   }
 }
 
