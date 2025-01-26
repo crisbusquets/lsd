@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import contactoTitle from "../assets/resources/titles/contacto.svg";
+import sparkleGIF from "../assets/resources/ui/bengala.gif";
+import Page from "../layouts/Page.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<Page>
+  <div class="content">
+    <h1>
+      <Image src={contactoTitle} alt="Contacto Lluís Sallés." class="page-title-svg" />
+    </h1>
+    <div class="form-container">
+      <div class="form">
+        <ContactForm />
+      </div>
+      <div class="sparkle">
+        <Image src={sparkleGIF} alt="Bengala" />
+        <caption> Your goal should be to shine! </caption>
+      </div>
+    </div>
+  </div>
+</Page>
+
+<style>
+  div.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  div.form {
+    flex: 1 1 auto;
+    margin: 0 64px 0 0;
+  }
+  div.sparkle {
+    flex: 0 0 250px;
+  }
+  @media (max-width: 768px) {
+    div.sparkle {
+      flex: 0 0 100%;
+      text-align: center;
+      margin: $section-lateral-padding 0 0 0;
+    }
+  }
+  caption {
+    padding: var(--p-text-xsmall-margin) 0;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+</style>
