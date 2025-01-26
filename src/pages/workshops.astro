@@ -1,0 +1,79 @@
+---
+import Page from "../layouts/Page.astro";
+import { Image } from "astro:assets";
+import workshopsTitle from "../assets/resources/titles/workshops.svg";
+import workshopElisava from "../assets/resources/teaching/lluis-salles-elisava.jpg";
+---
+
+<Page>
+  <div class="content">
+    <h1>
+      <Image src={workshopsTitle} alt="Workshops Lluís Sallés" class="page-title-svg" />
+    </h1>
+    <p>
+      <strong>Workshop Volkswagen (2022/23)</strong>: Proyecto dirigido por Lluís Sallés, con la colaboración de las
+      alumni Carla De la Torre y Elisabeth Català. Bajo el paraguas del departamento de empresa de Elisava.
+    </p>
+    <ul class="basic">
+      <li>
+        Título:
+        <i>Reconectar. Brand love merchandising for Volkswagen X Elisava</i>.
+      </li>
+      <li>
+        Con la participación de las estudiantes: Adriana Vila Campos, Maia Diaz Moreau, Andrea Grau Albardiaz, Mira
+        Ballesteros Sáez, Maria Radigales i Garcia, Joan Coromina Parcet, Joaquim Solà Estrada, Bernat Rucabado y Marta
+        Altés Mas.
+      </li>
+    </ul>
+
+    <Image src={workshopElisava} alt="Elisava - Lluís Sallés" class="teaching-image" />
+
+    <p>
+      <strong>Workshop Danone (2010/2011)</strong>: Proyecto tutorizado por Lluís Sallés conjuntamente con Cristina
+      Taverner. Desarrollo de producto y reposicionamiento.
+    </p>
+    <ul class="basic">
+      <li>
+        Título:
+        <i>Workshop. The Cream Team</i>.
+      </li>
+      <li>
+        Con la participación de las estudiantes: Alba Boyer, Carla Cava, Bet Escudé, Andrés Gomez, Gastón Lisak, Claudia
+        Orengo, Oscar Pérez, Martín Pires, Jordi Poblet, Patricia Rubio, Ricardo Rustarazo, Hansel Schloupt, Arnau
+        Tàsies y Marta Zabala.
+      </li>
+    </ul>
+  </div>
+</Page>
+
+<style>
+  p:nth-of-type(n + 2) {
+    margin: var(--section-content-padding) 0 var(--p-text-small-margin) 0;
+  }
+
+  p {
+    margin: 0 0 var(--p-text-small-margin) 0;
+  }
+
+  ul.basic li {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    ul.basic li {
+      margin: 0;
+    }
+  }
+
+  img.teaching-image {
+    margin: var(--p-text-xmedium-margin) 0 0 0;
+  }
+
+  @media (max-width: 768px) {
+    img.teaching-image {
+      max-width: 804px;
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
