@@ -9,7 +9,7 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 <div class="lateral">
   <header>
     <a href="/">
-      <Image src={signature} alt="Lluís Sallés" />
+      <Image src={signature} alt="Lluís Sallés" class="logo" />
     </a>
 
     <Navigation />
@@ -27,6 +27,10 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 <style>
   header {
     position: fixed;
+  }
+
+  .logo {
+    margin-bottom: var(--section-lateral-padding);
   }
 
   @media (max-width: 768px) {

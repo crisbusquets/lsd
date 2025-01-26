@@ -9,7 +9,7 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 <div class="intro">
   <header>
     <a href="/">
-      <Image src={signature} alt="Lluís Sallés" />
+      <Image src={signature} alt="Lluís Sallés" class="logo" />
     </a>
 
     <Navigation />
@@ -21,7 +21,6 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
         No bromeo, escribo incluso durmiendo.<br />Creador de
         <i>argumentos narrativos</i>.
       </h1>
-      <br />
       <p>
         Hacedor de contenidos, narrativos y visuales.
         <a href="/diseno"><i>Naming</i></a>, especialista en conceptualización,
@@ -43,30 +42,20 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 </div>
 
 <style>
+  .logo {
+    margin-bottom: var(--section-lateral-padding);
+  }
   .intro {
     display: flex;
     flex: 1 1 100%;
     margin: var(--section-content-padding) 0 0 var(--section-content-margin);
     justify-content: space-between;
-  }
-
-  @media (max-width: 768px) {
-    .intro {
-      padding: 0 var(--section-content-small-padding);
-      margin: 0;
-    }
+    align-items: end;
   }
 
   .titular {
     width: 425px;
     margin: var(--section-content-padding) 0 var(--section-content-medium-padding) 0;
-  }
-
-  @media (max-width: 768px) {
-    .titular {
-      width: 100%;
-      margin: var(--section-lateral-padding) 0 0 0;
-    }
   }
 
   h1 {
@@ -97,12 +86,5 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
   .silhouette:hover ~ .cerillas img {
     width: 80%;
     height: auto;
-  }
-
-  @media (max-width: 768px) {
-    /* Assuming $tablet is 768px */
-    .silhouette {
-      display: none;
-    }
   }
 </style>

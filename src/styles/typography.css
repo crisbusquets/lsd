@@ -21,19 +21,6 @@ i {
   font-style: italic;
 }
 
-p,
-li,
-span,
-label,
-input,
-caption,
-textarea,
-button,
-a {
-  font-size: var(--font-size-body-1);
-  line-height: 1.35;
-}
-
 span {
   color: var(--text-secondary);
 }

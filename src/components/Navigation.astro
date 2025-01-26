@@ -3,35 +3,32 @@ const { pathname } = Astro.url;
 ---
 
 <nav>
-  <a href="/quienesel" class:list={[{ active: pathname === "/quienesel" }]}>¿Quién es el él?</a>
-  <a href="/docencia" class:list={[{ active: pathname === "/docencia" }]}>Docencia</a>
-  <a href="/diseno" class:list={[{ active: pathname === "/diseno" }]}>Diseño</a>
-  <a href="/workshops" class:list={[{ active: pathname === "/workshops" }]}>Workshops</a>
-  <a href="/conferencias" class:list={[{ active: pathname === "/conferencias" }]}>Conferencias</a>
-  <a href="/publicaciones" class:list={[{ active: pathname === "/publicaciones" }]}>Publicaciones</a>
-  <a href="/contacto" class:list={[{ active: pathname === "/contacto" }]}>Contacto</a>
+  <ul>
+    <li><a href="/quienesel" class:list={[{ active: pathname === "/quienesel" }]}>¿Quién es el él?</a></li>
+    <li><a href="/docencia" class:list={[{ active: pathname === "/docencia" }]}>Docencia</a></li>
+    <li><a href="/diseno" class:list={[{ active: pathname === "/diseno" }]}>Diseño</a></li>
+    <li><a href="/workshops" class:list={[{ active: pathname === "/workshops" }]}>Workshops</a></li>
+    <li><a href="/conferencias" class:list={[{ active: pathname === "/conferencias" }]}>Conferencias</a></li>
+    <li><a href="/publicaciones" class:list={[{ active: pathname === "/publicaciones" }]}>Publicaciones</a></li>
+    <li><a href="/contacto" class:list={[{ active: pathname === "/contacto" }]}>Contacto</a></li>
+  </ul>
 </nav>
 
 <style>
-  nav {
-    display: flex;
-    flex-direction: column;
+  nav ul {
     font-size: var(--font-size-nav-1);
+    margin-bottom: var(--p-text-small-margin);
+    list-style: none;
     line-height: 1.3;
   }
-
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: row;
-      font-size: var(--font-size-nav-1-mobile);
-    }
+  nav ul li {
+    padding-bottom: var(--p-text-small-margin);
   }
 
   a {
     text-decoration: underline;
     transition: all 0.3s;
     color: var(--text-primary);
-    margin: 0 0 var(--p-text-xsmall-margin) 0;
   }
 
   a:hover {
