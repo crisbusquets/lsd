@@ -35,10 +35,6 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
   <div class="silhouette">
     <Image src={silhouette} alt="" />
   </div>
-
-  <div class="cerillas">
-    <Image src={cerillas} alt="" />
-  </div>
 </div>
 
 <style>
@@ -70,21 +66,5 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
     display: flex;
     align-items: flex-end;
     z-index: 99;
-  }
-
-  .silhouette:hover ~ .cerillas {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .silhouette:hover ~ .cerillas img {
-    width: 80%;
-    height: auto;
   }
 </style>
