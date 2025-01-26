@@ -3,9 +3,9 @@ const { pathname } = Astro.url;
 ---
 
 <nav>
-  <a href="/" class:list={[{ active: pathname === "/" }]}>Joum</a>
   <a href="/quienesel" class:list={[{ active: pathname === "/quienesel" }]}>¿Quién es el él?</a>
   <a href="/docencia" class:list={[{ active: pathname === "/docencia" }]}>Docencia</a>
+  <a href="/diseno" class:list={[{ active: pathname === "/diseno" }]}>Diseño</a>
   <a href="/workshops" class:list={[{ active: pathname === "/workshops" }]}>Workshops</a>
   <a href="/conferencias" class:list={[{ active: pathname === "/conferencias" }]}>Conferencias</a>
   <a href="/publicaciones" class:list={[{ active: pathname === "/publicaciones" }]}>Publicaciones</a>
