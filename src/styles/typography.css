@@ -4,7 +4,6 @@ h1 {
   line-height: 130%;
 }
 
-/* Responsive font size for headings */
 @media (max-width: 768px) {
   h1 {
     font-size: var(--font-size-title-1-mobile);

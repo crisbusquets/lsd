@@ -5,34 +5,18 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <Hero />
-  <div>
-    <div class="content-video">
-      <video width="100%" height="auto" controls autoplay loop preload="auto" playsinline>
-        <source src="../../public/video/lsd-video-loop.mp4" type="video/mp4" />
-        <source src="../../public/video/lsd-video-loop.webm" type="video/webm" />
-        Tu navegador no da soporte a vídeos.
-      </video>
-    </div>
+
+  <div class="content-video">
+    <video width="100%" height="auto" controls autoplay loop preload="auto" playsinline>
+      <source src="../../public/video/lsd-video-loop.mp4" type="video/mp4" />
+      <source src="../../public/video/lsd-video-loop.webm" type="video/webm" />
+      Tu navegador no da soporte a vídeos.
+    </video>
   </div>
 </Layout>
 
 <style>
   .content-video {
     margin: 0;
-  }
-  @media (max-width: 768px) {
-    .content-video {
-      margin: var(--section-lateral-padding) 0;
-    }
-  }
-  .silhouette {
-    display: none;
-  }
-  @media (max-width: 768px) {
-    .silhouette {
-      display: block;
-      text-align: center;
-      position: relative;
-    }
   }
 </style>

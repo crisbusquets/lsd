@@ -39,52 +39,60 @@ html {
   transition: var(--transition-default);
 }
 
-div header {
+header {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  div header {
+  header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 var(--p-text-small-margin) var(--p-text-xsmall-margin) var(--p-text-small-margin);
   }
-  div header img {
+  header img {
     height: 32px;
     padding: 0;
     margin: var(--p-text-xsmall-margin) 0 0 0;
   }
 }
 
+.logo {
+  margin-bottom: var(--section-lateral-padding);
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
 div.wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   height: var(--full-height);
-  align-items: center;
+  max-width: var(--max-content);
+  margin: var(--section-container-margin) auto;
+}
+
+@media (max-width: 768px) {
+  div.wrapper {
+    margin: var(--p-text-medium-margin) auto;
+    padding: 0 16px;
+  }
 }
 
 div.container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: var(--max-content);
-  margin: var(--section-container-margin) 0 0 0;
-}
-
-@media (max-width: 768px) {
-  div.container {
-    flex-direction: column;
-    margin: var(--section-content-small-padding) 0 0 0;
-  }
+  flex-wrap: wrap;
 }
 
 div.lateral {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  flex: 0 0 180px;
+  flex: 1 1 180px;
   margin: 0 var(--section-lateral-margin) 0 0;
   height: var(--full-height);
 }
@@ -93,6 +101,7 @@ div.lateral {
   div.lateral {
     flex: 1 1 100%;
     margin: 0;
+    height: auto;
   }
 }
 

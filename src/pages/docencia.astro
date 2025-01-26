@@ -290,20 +290,16 @@ import Page from "../layouts/Page.astro";
       text-align: left;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      gap: var(--p-text-sm-margin) var(--p-text-sm-margin);
+      gap: var(--section-content-medium-padding);
       grid-template-areas:
         ". ."
         ". ."
         ". ."
         ". .";
     }
-  }
-
-  @media all and (-ms-high-contrast: none) {
-    .logo-grid {
-      display: -ms-grid;
-      -ms-grid-columns: (1fr) [4];
-      -ms-grid-rows: (1fr) [2];
+    .logo-grid img {
+      width: 100%;
+      height: auto;
     }
   }
 </style>

@@ -3,10 +3,9 @@ import Navigation from "./Navigation.astro";
 import { Image } from "astro:assets";
 import signature from "../assets/resources/titles/lluis-salles-signature.svg";
 import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
-import cerillas from "../assets/resources/ui/bg-cerillas.png";
 ---
 
-<div class="intro">
+<div class="lateral-home">
   <header>
     <a href="/">
       <Image src={signature} alt="Lluís Sallés" class="logo" />
@@ -14,7 +13,9 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 
     <Navigation />
   </header>
+</div>
 
+<div class="intro">
   <div class="titular">
     <div>
       <h1>
@@ -38,33 +39,46 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
 </div>
 
 <style>
-  .logo {
-    margin-bottom: var(--section-lateral-padding);
+  .lateral-home {
+    flex: 1 1 25%;
   }
+
   .intro {
     display: flex;
-    flex: 1 1 100%;
-    margin: var(--section-content-padding) 0 0 var(--section-content-margin);
+    flex: 1 1 75%;
     justify-content: space-between;
-    align-items: end;
   }
 
   .titular {
-    width: 425px;
-    margin: var(--section-content-padding) 0 var(--section-content-medium-padding) 0;
-  }
-
-  h1 {
-    margin: 0 0 var(--p-text-small-margin) 0;
-  }
-
-  .cerillas {
-    display: none;
+    margin-top: 96px;
+    width: 50ch;
   }
 
   .silhouette {
     display: flex;
     align-items: flex-end;
     z-index: 99;
+  }
+
+  header {
+    display: flex;
+    position: relative;
+  }
+
+  @media (max-width: 768px) {
+    .lateral-home {
+      flex: 1 1 100%;
+      margin: 0;
+    }
+
+    .intro {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .titular {
+      width: 100%;
+      margin: var(--section-lateral-padding) 0 0 0;
+    }
   }
 </style>
