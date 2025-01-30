@@ -10,15 +10,15 @@ const { pathname } = Astro.url;
 
   <ul id="main-menu" class="nav-menu">
     <li><a href="/quienesel" class:list={["nav-link", { active: pathname === "/quienesel" }]}>¿Quién es él?</a></li>
-    <li><a href="/docencia" class:list={["nav-link", { active: pathname === "/docencia" }]}>Docencia</a></li>
-    <li><a href="/diseno" class:list={["nav-link", { active: pathname === "/diseno" }]}>Diseño</a></li>
-    <li><a href="/workshops" class:list={["nav-link", { active: pathname === "/workshops" }]}>Workshops</a></li>
-    <li>
-      <a href="/conferencias" class:list={["nav-link", { active: pathname === "/conferencias" }]}>Conferencias</a>
-    </li>
     <li>
       <a href="/publicaciones" class:list={["nav-link", { active: pathname === "/publicaciones" }]}>Publicaciones</a>
     </li>
+    <li><a href="/docencia" class:list={["nav-link", { active: pathname === "/docencia" }]}>Docencia</a></li>
+    <li>
+      <a href="/conferencias" class:list={["nav-link", { active: pathname === "/conferencias" }]}>Conferencias</a>
+    </li>
+    <li><a href="/diseno" class:list={["nav-link", { active: pathname === "/diseno" }]}>Diseño</a></li>
+    <li><a href="/workshops" class:list={["nav-link", { active: pathname === "/workshops" }]}>Workshops</a></li>
     <li><a href="/contacto" class:list={["nav-link", { active: pathname === "/contacto" }]}>Contacto</a></li>
   </ul>
 </nav>
