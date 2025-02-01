@@ -55,14 +55,14 @@ div.wrapper {
 
 div.container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 div.lateral {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  flex: 1 1 180px;
+  flex: 0 1 180px;
   margin: 0 var(--section-lateral-margin) 0 0;
   height: var(--full-height);
 }
@@ -164,6 +164,9 @@ ul.basic li {
     padding: 0 16px;
   }
 
+  div.container {
+    flex-wrap: wrap;
+  }
   div.lateral {
     flex: 1 1 100%;
     margin: 0;
