@@ -5,7 +5,7 @@ import clase from "../assets/resources/teaching/lluis-salles-docencia.jpg";
 import carteles from "../assets/resources/teaching/lluis-salles-jurat-cartells-festa-major.jpg";
 import creatusdominus from "../assets/resources/teaching/creatus-dominus-2016-2-lluis-salles.jpg";
 import logoElisava from "../assets/resources/logos/elisava.svg";
-import logoUAB from "../assets/resources/logos/uab.svg";
+import logoUAB from "../assets/resources/logos/uab2.svg";
 import logoIDEC from "../assets/resources/logos/idec.svg";
 import logoEAD from "../assets/resources/logos/ead.svg";
 import logoIED from "../assets/resources/logos/ied.svg";
@@ -31,6 +31,19 @@ const pageKeywords = "docencia universitaria, Elisava, UAB, diseño gráfico, br
     </p>
 
     <ul class="ornamental">
+      <li><strong>Curso 2024/25</strong></li>
+      <ul class="basic indent spacing">
+        <li>
+          <strong>Profesor en el Grado en diseño</strong>: Fonaments del Disseny Gràfic; Design management; Identidad
+          Personal; New trends; Comunicación II. Fotografía de Producto y Dirección de Arte; Proyecto II; Tutor de
+          proyectos de fin de Grado en diseño y Tribunal de TFG; Prácticas externas.
+        </li>
+        <li>
+          <strong
+            >Profesor en el Máster Universitario en Estudios Interdisciplinarios en Diseño y Comunicación (MUEIDC)</strong
+          > y Tutor de Trabajos de Fin de Master.
+        </li>
+      </ul>
       <li><strong>Curso 2023/24</strong></li>
       <ul class="basic indent spacing">
         <li>
@@ -279,7 +292,6 @@ const pageKeywords = "docencia universitaria, Elisava, UAB, diseño gráfico, br
   .logo-grid {
     margin: var(--section-content-medium-padding) 0 0 0;
     display: grid;
-    text-align: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: var(--section-lateral-padding) 0;
@@ -288,6 +300,7 @@ const pageKeywords = "docencia universitaria, Elisava, UAB, diseño gráfico, br
       ". . . ."
       ". . . .";
     align-items: center;
+    justify-items: flex-end;
   }
 
   @media (max-width: 768px) {
