@@ -13,6 +13,8 @@ import logoEsart from "../assets/resources/logos/esart.svg";
 import logoAitex from "../assets/resources/logos/aitex.svg";
 import Page from "../layouts/Page.astro";
 
+const { pathname } = Astro.url;
+
 const pageTitle = "Experiencia docente de Lluís Sallés - Profesor Universitario";
 const pageDescription =
   "Profesor en Elisava, UAB y otras instituciones académicas. Especializado en diseño, branding e identidad corporativa.";
@@ -27,7 +29,9 @@ const pageKeywords = "docencia universitaria, Elisava, UAB, diseño gráfico, br
     <p>
       <i>Elisava UVic. Facultad de diseño e ingeniería de Barcelona</i>. Desde 1993 hasta julio de 2011 profesor de
       <strong>Proyectos, Identidad corporativa, señalética y otras asignaturas</strong>
-      en la especialidad de Diseño Gráfico.:
+      en la especialidad de Diseño Gráfico. Desde el 2016 ha impartido classes en las siguientes asignaturas, así como en
+      los <a href="/workshops" class:list={["nav-link", { active: pathname === "/workshops" }]}>workshops</a> para Wolkswagen
+      y Danone:
     </p>
 
     <ul class="ornamental">
