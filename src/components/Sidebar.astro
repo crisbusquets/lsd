@@ -3,7 +3,7 @@ import Navigation from "./Navigation.astro";
 import { Image } from "astro:assets";
 import signature from "../assets/resources/titles/lluis-salles-signature.svg";
 import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
-import cerillas from "../assets/resources/ui/bg-cerillas.png";
+import indiana from "../assets/resources/ui/encaputxat.png";
 ---
 
 <div class="lateral">
@@ -19,8 +19,8 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
     <Image src={silhouette} alt="" />
   </div>
 
-  <div class="cerillas">
-    <Image src={cerillas} alt="" />
+  <div class="indiana">
+    <Image src={indiana} alt="" />
   </div>
 </div>
 
@@ -36,7 +36,7 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
     }
   }
 
-  .cerillas {
+  .indiana {
     display: none;
   }
 
@@ -46,10 +46,9 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
     z-index: 99;
   }
 
-  .silhouette:hover ~ .cerillas {
+  .silhouette:hover ~ .indiana {
     position: fixed;
     display: flex;
-    justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
@@ -57,8 +56,8 @@ import cerillas from "../assets/resources/ui/bg-cerillas.png";
     height: 100vh;
   }
 
-  .silhouette:hover ~ .cerillas img {
-    width: 80%;
+  .silhouette:hover ~ .indiana img {
+    width: 100%;
     height: auto;
   }
 
