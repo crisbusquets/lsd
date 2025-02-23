@@ -3,6 +3,7 @@ import Navigation from "./Navigation.astro";
 import { Image } from "astro:assets";
 import signature from "../assets/resources/titles/lluis-salles-signature.svg";
 import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
+const { pathname } = Astro.url;
 ---
 
 <div class="lateral-home">
@@ -17,47 +18,57 @@ import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
 
 <div class="intro">
   <div class="titular">
-    <div>
-      <h1>
-        No bromeo, escribo incluso durmiendo.<br />Creador de
-        <i>argumentos narrativos</i>.
-      </h1>
-      <p>
-        Hacedor de contenidos, narrativos y visuales.
-        <a href="/diseno"><i>Naming</i></a>, especialista en conceptualización,
-        <a href="/conferencias"><i>storytelling</i></a> y
-        <a href="/diseno"><i>design thinker</i></a>. Copy Creativo.
-      </p>
-      <p>
-        Teórico, investigador y <a href="/docencia">docente</a>. A veces escribo <a href="/publicaciones">libros</a>.
-      </p>
-    </div>
+    <h1>
+      Justo allí, en el espacio interior de cada letra, en el vacío entre las palabras, tras una coma o al superar un
+      punto, es donde acontece la existencia.
+    </h1>
+    <p>
+      Escribir no es un ejercicio, tampoco un hábito, es una forma de vida donde el yo se desarrolla en paralelo a lo
+      que la gente llama realidad. Las palabras, en todas sus formas, son universales a la espera de ser conjugadas
+      hasta el infinito.
+    </p>
+    <p>
+      <i
+        >Ahora, convertido en un <a href="/quienesel" class:list={["nav-link", { active: pathname === "/quienesel" }]}
+          >quincuagenario</a
+        >, quizás ya solo adquiera sentido al <a
+          href="/publicaciones"
+          class:list={["nav-link", { active: pathname === "/publicaciones" }]}>escribir</a
+        >.</i
+      >
+    </p>
   </div>
-  <div class="silhouette">
-    <Image src={silhouette} alt="" />
-  </div>
+</div>
+<div class="silhouette">
+  <Image src={silhouette} alt="" />
 </div>
 
 <style>
   .lateral-home {
-    flex: 1 1 25%;
+    flex: 1 1 13%;
   }
 
   .intro {
     display: flex;
-    flex: 1 1 75%;
-    justify-content: space-between;
+    flex: 1 1 auto;
   }
 
   .titular {
-    margin-top: 96px;
-    width: 50ch;
+    margin-top: var(--p-text-large-margin);
+    margin-bottom: var(--p-text-xmedium-margin);
+    width: 65ch;
+  }
+
+  h1,
+  p {
+    text-wrap: pretty;
   }
 
   .silhouette {
     display: flex;
     align-items: flex-end;
     z-index: 99;
+    margin-right: 48px;
   }
 
   header {
