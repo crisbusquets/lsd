@@ -1,12 +1,12 @@
 h1 {
   font-weight: bold;
-  font-size: var(--font-size-title-1);
+  font-size: var(--text-lg);
   line-height: 130%;
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: var(--font-size-title-1-mobile);
+    font-size: var(--text-xl);
   }
 }
 
@@ -21,7 +21,7 @@ i {
 }
 
 span {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -34,21 +34,21 @@ span {
   textarea,
   button,
   a {
-    font-size: var(--font-size-body-1-mobile);
+    font-size: var(--text-md);
   }
 }
 
 a {
   text-decoration: underline;
-  transition: var(--transition-default);
-  color: var(--link-color);
+  transition: var(--transition-base);
+  color: var(--color-primary);
 }
 
 a:hover {
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   text-decoration: none;
 }
 
 p {
-  margin: 0 0 var(--p-text-small-margin) 0;
+  margin: 0 0 var(--space-md) 0;
 }

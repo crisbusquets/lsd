@@ -1,13 +1,13 @@
 *,
 *:before,
 *:after {
-  cursor: var(--regular-cursor);
+  cursor: var(--cursor-default);
   box-sizing: border-box;
 }
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size-body-1);
+  font-size: var(--text-md);
 }
 
 .mobile-only {
@@ -27,12 +27,12 @@ a > i,
 nav a > i,
 #navigation-icon,
 #navigation-icon-close {
-  cursor: var(--link-cursor);
+  cursor: var(--cursor-pointer);
 }
 
 html {
   background-color: var(--html-background-color);
-  transition: var(--transition-default);
+  transition: var(--transition-base);
 }
 
 header {
@@ -41,16 +41,16 @@ header {
 }
 
 .logo {
-  margin-bottom: var(--section-lateral-padding);
+  margin-bottom: var(--space-xl);
   height: auto;
   width: auto;
   max-width: 100%;
 }
 
 div.wrapper {
-  height: var(--full-height);
-  max-width: var(--max-content);
-  margin: var(--section-container-margin) auto;
+  height: var(--layout-height-full);
+  max-width: var(--breakpoint-max-width);
+  margin: var(--space-3xl) auto;
 }
 
 div.container {
@@ -64,19 +64,19 @@ div.lateral {
   justify-content: space-between;
   flex: 0 1 180px;
   margin: 0 var(--section-lateral-margin) 0 0;
-  height: var(--full-height);
+  height: var(--layout-height-full);
 }
 
 div.content {
   flex: 1 1 880px;
   height: auto;
-  background-color: var(--background-color);
-  box-shadow: var(--box-shadow-default);
-  padding: var(--section-content-padding);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-default);
+  padding: var(--space-2xl);
 }
 
 .page-title-svg {
-  margin-bottom: var(--section-lateral-padding);
+  margin-bottom: var(--space-xl);
   width: auto;
   max-width: 100%;
 }
@@ -91,7 +91,7 @@ ul.basic li {
   position: relative;
   list-style-type: none;
   margin-left: 0;
-  padding-left: var(--p-text-small-margin);
+  padding-left: var(--space-md);
   background-repeat: no-repeat;
   background-position: 0px 10px;
 }
@@ -105,8 +105,8 @@ ul.basic li {
 }
 
 #navigation-icon-close {
-  top: var(--section-content-small-padding);
-  right: var(--section-content-small-padding);
+  top: var(--space-md);
+  right: var(--space-md);
   position: fixed;
   z-index: 1;
 }
@@ -114,7 +114,7 @@ ul.basic li {
 #navigation-icon,
 #navigation-icon-close {
   font-size: 1.7rem;
-  margin: var(--p-text-xsmall-margin);
+  margin: var(--space-sm);
 }
 
 .menumobile {
@@ -128,7 +128,7 @@ ul.basic li {
 }
 
 .open {
-  background-color: var(--link-color);
+  background-color: var(--color-primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -152,7 +152,7 @@ ul.basic li {
   header img {
     height: 32px;
     padding: 0;
-    margin: var(--p-text-xsmall-margin) 0 0 0;
+    margin: var(--space-sm) 0 0 0;
   }
 
   .logo {
@@ -160,7 +160,7 @@ ul.basic li {
   }
 
   div.wrapper {
-    margin: var(--p-text-medium-margin) auto;
+    margin: var(--space-xl) auto;
     padding: 0 16px;
   }
 
@@ -176,7 +176,7 @@ ul.basic li {
   div.content {
     margin-top: 60px;
     margin-bottom: 300px;
-    padding: var(--p-text-xmedium-margin);
+    padding: var(--space-lg);
   }
 
   .page-title-svg {

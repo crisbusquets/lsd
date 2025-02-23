@@ -93,33 +93,33 @@
   form textarea {
     width: 100%;
     font-family: var(--font-family);
-    border: 1px solid var(--form-regular);
-    padding: var(--p-text-xsmall-margin);
+    border: 1px solid var(--color-border);
+    padding: var(--space-sm);
   }
 
   form input:focus,
   form textarea:focus {
     outline: none;
-    border: 1px solid var(--link-color);
+    border: 1px solid var(--color-primary);
   }
 
   form input.error-input,
   form textarea.error-input {
-    border: 1px solid var(--error);
+    border: 1px solid var(--color-error);
   }
 
   form span {
     display: block;
-    color: var(--error);
+    color: var(--color-error);
   }
 
   form label {
     display: block;
-    margin: var(--p-text-medium-margin) 0 var(--p-text-xsmall-margin) 0;
+    margin: var(--space-xl) 0 var(--space-sm) 0;
   }
 
   form label.first {
-    margin: 0 0 var(--p-text-xsmall-margin) 0;
+    margin: 0 0 var(--space-sm) 0;
   }
 
   form textarea {
@@ -127,18 +127,18 @@
   }
 
   form button {
-    margin-top: var(--p-text-xmedium-margin);
+    margin-top: var(--space-lg);
     font-family: var(--font-family);
     font-weight: bold;
-    background-color: var(--link-color);
-    border: 1px solid var(--link-color);
-    padding: var(--p-text-xsmall-margin) var(--p-text-small-margin);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: var(--space-sm) var(--space-md);
     color: var(--html-background-color);
-    transition: var(--transition-time-default);
+    transition: var(--duration-default);
   }
 
   form button:hover {
-    background-color: var(--link-hover);
-    border: 1px solid var(--link-hover);
+    background-color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);
   }
 </style>

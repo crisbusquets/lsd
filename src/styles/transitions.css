@@ -1,12 +1,12 @@
 .page-enter-active,
 .page-leave-active {
-  transition: var(--transition-default);
+  transition: var(--transition-base);
 }
 
 @media (max-width: 768px) {
   .page-enter-active,
   .page-leave-active {
-    transition: var(--transition-default-tablet);
+    transition: var(--transition-mobile);
   }
 }
 

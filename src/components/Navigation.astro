@@ -30,20 +30,20 @@ const { pathname } = Astro.url;
   }
 
   nav ul {
-    font-size: var(--font-size-nav-1);
-    margin-bottom: var(--p-text-small-margin);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
     list-style: none;
     line-height: 1.3;
   }
 
   nav ul li {
-    padding-bottom: var(--p-text-small-margin);
+    padding-bottom: var(--space-md);
   }
 
   a {
     text-decoration: underline;
     transition: all 0.3s;
-    color: var(--text-primary);
+    color: var(--color-text-primary);
   }
 
   a:hover {
@@ -67,7 +67,7 @@ const { pathname } = Astro.url;
 
   .menu-icon,
   .close-icon {
-    font-size: var(--font-size-title-1-mobile);
+    font-size: var(--text-xl);
   }
 
   .close-icon {
@@ -97,14 +97,14 @@ const { pathname } = Astro.url;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--text-primary);
+      background-color: var(--color-text-primary);
       z-index: 999;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       opacity: 0;
       visibility: hidden;
-      height: var(--full-height);
+      height: var(--layout-height-full);
       transition:
         opacity 0.3s ease,
         visibility 0.3s ease;
@@ -119,7 +119,7 @@ const { pathname } = Astro.url;
       font-size: 1.5rem;
       padding: 1rem 0;
       opacity: 0;
-      color: var(--background-color);
+      color: var(--color-background);
       transform: translateY(20px);
       transition:
         opacity 0.3s ease,
