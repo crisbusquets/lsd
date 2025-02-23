@@ -1,3 +1,7 @@
+:root {
+  --transition-time-default: 500ms; /* Temporarily increase to test */
+}
+
 *,
 *:before,
 *:after {
@@ -76,7 +80,7 @@ div.content {
 }
 
 .page-title-svg {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
   width: auto;
   max-width: 100%;
 }

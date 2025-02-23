@@ -1,17 +1,26 @@
-.page-enter-active,
-.page-leave-active {
-  transition: var(--transition-base);
+.content,
+.content-video,
+.intro,
+.silhouette {
+  animation: fadeIn var(--transition-time-default) ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .page-enter-active,
-  .page-leave-active {
-    transition: var(--transition-mobile);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-  transform-origin: 50% 50%;
+@media (max-width: 768px) {
+  .content,
+  .content-video,
+  .intro,
+  .silhouette {
+    animation-duration: var(--transition-time-tablet);
+  }
 }
