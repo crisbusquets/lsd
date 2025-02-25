@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 import signature from "../assets/resources/titles/lluis-salles-signature.svg";
 import silhouette from "../assets/resources/ui/lluis-salles-silhouette-v2.svg";
 import indiana from "../assets/resources/ui/encaputxat.png";
+
+// Get the actual path to the optimized image
+const indianaPath = await indiana.src;
 ---
 
 <div class="lateral">
@@ -14,6 +17,9 @@ import indiana from "../assets/resources/ui/encaputxat.png";
 
     <Navigation />
   </header>
+
+  {/* Preload the image */}
+  <link rel="preload" href={indianaPath} as="image" />
 
   <div class="silhouette">
     <Image src={silhouette} alt="" />
@@ -38,28 +44,38 @@ import indiana from "../assets/resources/ui/encaputxat.png";
 
   .indiana {
     display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .indiana img {
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
   }
 
   .silhouette {
     position: fixed;
     bottom: 0;
     z-index: 99;
+    cursor: pointer;
   }
 
   .silhouette:hover ~ .indiana {
-    position: fixed;
     display: flex;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-  }
-
-  .silhouette:hover ~ .indiana img {
-    width: 100%;
-    height: auto;
+    visibility: visible;
+    opacity: 1;
   }
 
   @media (max-width: 768px) {
